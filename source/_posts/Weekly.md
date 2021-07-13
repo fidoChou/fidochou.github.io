@@ -4,7 +4,65 @@ title: Weekly
 date: 2021-06-19 21:20:31
 categories: Weekly
 ---
-#### 2021.06.21 - 2021.06.28
+#### 2021.07.20 - 2021.07.27
+
+* [React: 五种不好的编程方式](https://betterprogramming.pub/5-code-smells-react-beginners-should-avoid-480c97799162)
+* [ES2021](https://javascript.plainenglish.io/es12-is-going-to-make-your-life-easier-6be8d131e117)
+	* replaceAll 已经用上了
+	* &&=，||=，和??=
+* [react-virtual](https://github.com/tannerlinsley/react-virtual)
+* [视频防盗链技术方案研究与讲解](https://www.xiaoheidiannao.com/213903.html)
+* [v8-release-92](https://v8.dev/blog/v8-release-92)
+
+
+#### 2021.07.12 - 2021.07.19
+
+* [JS Is Weird](https://jsisweird.com/)
+	* 我挺讨厌这个网站的
+
+* [Encoding data for POST requests](https://jakearchibald.com/2021/encoding-data-for-post-requests/)
+	* URLSearchParams
+		* URLSearchParams 做为请求体的 body，Content-Type 头部会自动设置为「application/x-www-form-urlencoded」
+	
+	* FormData
+		* 最主要的是文件的传递
+		* formData 做为请求体：Content-Type 头部会自动设置为「multipart/form-data」
+		* FormData 可以转换为 URLSearchParams， 但含有文件时会抛错：application/x-www-form-urlencoded 不能代表文件数据
+
+	* Other Fetch bodies
+		* Blobs
+		* Strings：Content-Type：「text/plain;charset=UTF-8」
+		* Buffers：需要自己设置 Content-Type 的值
+		* Streams：不要试图处理 multipart/form-data或application/x-www-form-urlencoded，使用 FormData 和 URLSearchParams
+	* Bonus round: Converting Form Data to JSON
+
+* [React — 5 Things That Might Surprise You](https://medium.com/geekculture/react-5-things-that-might-surprise-you-ddefd9fbac0f)
+	* previous state is unpredictable
+	* use useRef to store a static variable
+	* 使用 key 强制重新挂载一个组件
+	* Context API 会导致所有的的组件重新渲染，可以使用第三方库：[use-context-selector](https://github.com/dai-shi/use-context-selector)
+	* 关于 Children 的 api：toArray、map、forEach、count、only
+
+
+#### 2021.07.05 - 2021.07.11
+* [How to useContext in React](https://www.robinwieruch.de/react-usecontext-hook)
+* [You have to start using this CSS property in your websites](https://bootcamp.uxdesign.cc/you-have-to-start-using-this-css-property-in-your-websites-7353f46def79)
+	* 我们的项目一直都有「safe-area」但我一直以为是通过 postCSS 定义的。其实在 iOS 上是原生的，安卓上可能有的手机有（我除了菜一无所有）
+
+* [Writing memory efficient software applications in Node.js](https://medium.com/dev-bits/writing-memory-efficient-software-applications-in-node-js-5575f646b67f#id_token=eyJhbGciOiJSUzI1NiIsImtpZCI6IjFiZjhhODRkM2VjZDc3ZTlmMmFkNWYwNmZmZDI2MDcwMWRkMDZkOTAiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJuYmYiOjE2MjU3MTQyMjIsImF1ZCI6IjIxNjI5NjAzNTgzNC1rMWs2cWUwNjBzMnRwMmEyamFtNGxqZGNtczAwc3R0Zy5hcHBzLmdvb2dsZXVzZXJjb250ZW50LmNvbSIsInN1YiI6IjEwMzkxNDcyODA1ODg3NDA4MDA4NyIsImVtYWlsIjoiaW5remhvdUBnbWFpbC5jb20iLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwiYXpwIjoiMjE2Mjk2MDM1ODM0LWsxazZxZTA2MHMydHAyYTJqYW00bGpkY21zMDBzdHRnLmFwcHMuZ29vZ2xldXNlcmNvbnRlbnQuY29tIiwibmFtZSI6IuWRqOmiliIsInBpY3R1cmUiOiJodHRwczovL2xoMy5nb29nbGV1c2VyY29udGVudC5jb20vYS9BQVRYQUp4YmhlVVJOWUlWNVlZNVpiUk8xQW9jMzgtSl9WVUViSUVRal9DYT1zOTYtYyIsImdpdmVuX25hbWUiOiLpopYiLCJmYW1pbHlfbmFtZSI6IuWRqCIsImlhdCI6MTYyNTcxNDUyMiwiZXhwIjoxNjI1NzE4MTIyLCJqdGkiOiI4MjdmMzY4OGEyYWQ4NjViYjhjNGNmOGE3OGUyMzY2ZjI2MTI4MjZiIn0.wMiYJApJEbHbF-sg_7tPXHZ9ZzoSR8V3yBlQeCjGYKVCOSfvKIBkugRqmMX96oVyqdFz5tU849Yx0hkGZHfif_ExtAzYcdmiyxs1eV5DiLZ3ieI_yDwaWrtpvdrkHfvT-3iE1ahsd_wrs6S2CGJB2H6gupBKmrtKrBFC1jfTz9DlrsJk88YFJyvLydoPxit8s1gc4nRa3xQt2VyMW4IMUjqbNyhx4yNjWaXuYbJ8J2eMKv8hBdOOx80sVRPEHDzOmM7GqV1iewgrUS3nBKFCJlGxaEV4HuIOuqyGeUx3fcG2E9HUEQJGXRcQRF7-O-cFEoxSkFUKDzg2kSieVjoGsQ)
+	* RAM（Random Access Memory）对于大文件的操作一不小心就 OOM，可以从 Node.js 提供的「流」和「缓冲」进行优化
+
+#### 2021.06.28 - 2021.07.04
+
+* [Temporal：JavaScript’s new date time API](https://2ality.com/2021/06/temporal-api.html)
+* [JavaScript: The First 20 Years](https://dl.acm.org/doi/pdf/10.1145/3386327)
+* [Super Simple Start to ESModules in Node.js](https://kentcdodds.com/blog/super-simple-start-to-es-modules-in-node-js)
+* [SolidJS Official Release: The long road to 1.0](https://dev.to/ryansolid/solidjs-official-release-the-long-road-to-1-0-4ldd)
+* [How to use Throttle or Debounce with React Hook](https://javascript.plainenglish.io/how-to-use-throttle-or-debounce-with-react-hook-776e402a5fac)
+* [Disabling a link](https://www.scottohara.me/blog/2021/05/28/disabled-links.html?utm_source=CSS-Weekly&utm_campaign=Issue-464&utm_medium=web)
+* [Using Performant Next-Gen Images in CSS with image-set](https://css-tricks.com/using-performant-next-gen-images-in-css-with-image-set/?utm_source=CSS-Weekly&utm_campaign=Issue-464&utm_medium=web)
+
+#### 2021.06.21 - 2021.06.27
 
 * [关于 React 18 你所需要知道的](/2021/06/23/前端-React-18-所需要知道的/)
 * [ES2021 Features!](https://h3manth.com/ES2021/)

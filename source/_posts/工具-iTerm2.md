@@ -2,7 +2,7 @@
 layout: iterm
 title: iTerm2
 date: 2020-05-11
-categories: 工具集合
+categories: 他山之石
 ---
 
 iTerm2 是我常用的终端工具，每次换电脑安装的第一个软件就是它。青睐于 iTerm 的原因很简单：

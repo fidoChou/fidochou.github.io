@@ -13,4 +13,8 @@ categories: 他山之石
 # Demo
 [👉 使用 react-dnd 实现拖拽 ](https://codesandbox.io/s/sortabletree-pwrfv)
 [👉 使用 draft.js 实现编辑器文本高亮](https://codesandbox.io/s/draft-js-highlight-ir4bd)
+[👉 3D hover 效果](https://codesandbox.io/s/3d-hover-effect-hqy6h)
+[👉 react-transcript-editor 厉害！文字居然可以跟随视频语音高亮](https://bbc.github.io/react-transcript-editor/iframe.html?id=demo--default) 
+[👉 MDN: white-space](https://developer.mozilla.org/zh-CN/docs/Web/CSS/white-space) 
+[👉 react-wavify](https://jaxson.vandoorn.ca/react-wavify/)
 

@@ -47,7 +47,7 @@ future: true
 
 highlight:
   enable: true
-  line_number: true
+  line_number: false
   auto_detect: false
   tab_replace: ''
   wrap: false
@@ -75,7 +75,7 @@ meta_generator: true
 ## Hexo uses Moment.js to parse and display date
 ## You can customize the date format as defined in
 ## http://momentjs.com/docs/#/displaying/format/
-date_format: YYYY-MM-DD
+date_format: YYYY/MM/DD
 time_format: HH:mm:ss
 ## Use post's date for updated date unless set in front-matter
 use_date_for_updated: false
@@ -148,3 +148,17 @@ feed:
 markdown:
   plugins:
     - markdown-it-latex2img
+
+flowchart:
+  # raphael:   # optional, the source url of raphael.js
+  # flowchart: # optional, the source url of flowchart.js
+  options: # options used for `drawSVG`
+    line-width: 1
+    font-size: 14
+    text-margin: 15
+
+
+
+
+
+

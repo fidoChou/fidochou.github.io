@@ -2,7 +2,7 @@
 layout: post
 title: 在 Hexo 中使用数学公式
 date: 2021-07-06 21:00:18
-categories: 工具集合
+categories: 他山之石
 ---
 ## 用法
 ```js
