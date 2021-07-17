@@ -16,12 +16,12 @@
     <meta name="keywords" content="jojo,前端,户外领队,frontend,nodejs,JavaScript,Outdoor Leader" />
   
 
-  <meta name="description" content="最好的学习当然是从看官方文档，如果英文不行那就来份中文文档的 🤦‍♀️ 从官方文档来看，总共五个方面：指南、概览、用法、预设以及工具。 指南 是什么：Babel 的作用是将「先进」的 ES 语法进行降级，编译成较低版本的浏览器能够识别的语法。  插件 &amp; 预设插件的作用就是 translate，预设的作用是启用一组插件 短名称 插件 babel-plugin- 可忽略 eg: babel">
+  <meta name="description" content="最好的学习当然是从看官方文档，如果英文不行那就来份中文文档的 🤦‍♀️ 从官方文档来看，总共五个方面：指南、概览、用法、预设以及工具。 指南  是什么：Babel 的作用是将「先进」的 ES 语法进行降级，编译成较低版本的浏览器能够识别的语法。  插件 &amp; 预设 插件的作用就是 translate，预设的作用是启用一组插件 短名称   插件 babel-plugin- 可忽略 eg: b">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Babel">
 <meta property="og:url" content="http://jocolorful.com/2020/12/18/%E5%89%8D%E7%AB%AF-babel/index.html">
 <meta property="og:site_name" content="Jojo&#39;s World">
-<meta property="og:description" content="最好的学习当然是从看官方文档，如果英文不行那就来份中文文档的 🤦‍♀️ 从官方文档来看，总共五个方面：指南、概览、用法、预设以及工具。 指南 是什么：Babel 的作用是将「先进」的 ES 语法进行降级，编译成较低版本的浏览器能够识别的语法。  插件 &amp; 预设插件的作用就是 translate，预设的作用是启用一组插件 短名称 插件 babel-plugin- 可忽略 eg: babel">
+<meta property="og:description" content="最好的学习当然是从看官方文档，如果英文不行那就来份中文文档的 🤦‍♀️ 从官方文档来看，总共五个方面：指南、概览、用法、预设以及工具。 指南  是什么：Babel 的作用是将「先进」的 ES 语法进行降级，编译成较低版本的浏览器能够识别的语法。  插件 &amp; 预设 插件的作用就是 translate，预设的作用是启用一组插件 短名称   插件 babel-plugin- 可忽略 eg: b">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-12-18T08:35:19.000Z">
 <meta property="article:modified_time" content="2021-07-06T13:14:32.627Z">
@@ -101,7 +101,7 @@ ga('send', 'pageview');
   
   <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#指南"><span class="toc-text">指南</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#插件-amp-预设"><span class="toc-text">插件 &amp; 预设</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#短名称"><span class="toc-text">短名称</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#AttachMent"><span class="toc-text">AttachMent</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Polyfills-可按需引入"><span class="toc-text">Polyfills 可按需引入</span></a></li></ol></li></ol></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#"><span class="toc-text">指南</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#"><span class="toc-text">插件 &amp; 预设</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#短名称"><span class="toc-text">短名称</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#AttachMent"><span class="toc-text">AttachMent</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Polyfills-可按需引入"><span class="toc-text">Polyfills 可按需引入</span></a></li></ol></li></ol></li></ol>
   </div>
 
 
@@ -149,28 +149,37 @@ ga('send', 'pageview');
     
       <p>最好的学习当然是从看官方文档，如果英文不行那就来份<a href="https://www.babeljs.cn/" target="_blank" rel="noopener">中文文档</a>的 🤦‍♀️</p>
 <p>从官方文档来看，总共五个方面：指南、概览、用法、预设以及工具。</p>
-<h1 id="指南"><a href="#指南" class="headerlink" title="指南"></a>指南</h1><ol>
+<h1>指南</h1>
+<ol>
 <li>是什么：Babel 的作用是将「先进」的 ES 语法进行降级，编译成较低版本的浏览器能够识别的语法。</li>
 </ol>
-<h1 id="插件-amp-预设"><a href="#插件-amp-预设" class="headerlink" title="插件 &amp; 预设"></a>插件 &amp; 预设</h1><p>插件的作用就是 translate，预设的作用是启用一组插件</p>
-<h2 id="短名称"><a href="#短名称" class="headerlink" title="短名称"></a>短名称</h2><ol>
-<li><p>插件 babel-plugin- 可忽略<br> eg: babel-plugin-lodash 等同于 lodash</p>
-<p> 可适用冠名 @org/</p>
+<h1>插件 &amp; 预设</h1>
+<p>插件的作用就是 translate，预设的作用是启用一组插件</p>
+<h2 id="短名称">短名称</h2>
+<ol>
+<li>
+<p>插件 babel-plugin- 可忽略<br>
+eg: babel-plugin-lodash 等同于 lodash</p>
+<p>可适用冠名 @org/</p>
 </li>
-<li><p>预设 babel-preset- 可忽略<br> eg: babel-preset-myPreset 等同于 myPreset</p>
-<p> 可适用冠名 @org/</p>
+<li>
+<p>预设 babel-preset- 可忽略<br>
+eg: babel-preset-myPreset 等同于 myPreset</p>
+<p>可适用冠名 @org/</p>
 </li>
 </ol>
-<p>##. 顺序<br>2. 插件顺序：从左往右</p>
+<p>##. 顺序<br>
+2. 插件顺序：从左往右</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="string">"plugins"</span>: [<span class="string">"transform-decorators-legacy"</span>, <span class="string">"transform-class-properties"</span>]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
 <ol start="3">
 <li>预设顺序：从右往左</li>
 </ol>
 <figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">"presets"</span>: [<span class="string">"@babel/preset-env"</span>, <span class="string">"@babel/preset-react"</span>]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="AttachMent"><a href="#AttachMent" class="headerlink" title="AttachMent"></a>AttachMent</h2><h3 id="Polyfills-可按需引入"><a href="#Polyfills-可按需引入" class="headerlink" title="Polyfills 可按需引入"></a>Polyfills 可按需引入</h3><p><a href="https://betgar.github.io/2019/07/30/babel6-loose-mode/" target="_blank" rel="noopener">loose 参数</a></p>
-<p>即松散模式：转换为简单的 ES5 实现。<br>而严格模式：转换时尽可能遵循、接近 ES6 语义。</p>
+<h2 id="AttachMent">AttachMent</h2>
+<h3 id="Polyfills-可按需引入">Polyfills 可按需引入</h3>
+<p><a href="https://betgar.github.io/2019/07/30/babel6-loose-mode/" target="_blank" rel="noopener">loose 参数</a></p>
+<p>即松散模式：转换为简单的 ES5 实现。<br>
+而严格模式：转换时尽可能遵循、接近 ES6 语义。</p>
 <p>可全局配置添加预设，也可给每个 plugin 设置参数</p>
 
     

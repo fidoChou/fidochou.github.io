@@ -8,7 +8,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   
-  <title>Nginx | Jojo&#39;s World</title>
+  <title>盛夏归家 | Jojo&#39;s World</title>
 
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -16,17 +16,19 @@
     <meta name="keywords" content="jojo,前端,户外领队,frontend,nodejs,JavaScript,Outdoor Leader" />
   
 
-  <meta name="description" content="重载配置文件 .&#x2F;nginx -s reload 日志切割 备份当前日志 .&#x2F;nginx -s  reopen 每周执行一次，写在脚本当中 crontab gzip on gzip_comp_level 2  压缩级别 压缩消耗GPU autoindex_moduls autoindex_on &#x2F;&#x2F;  文件夹 set limite-rate 控制流量 以秒为单位 access.log 缓存">
+  <meta name="description" content="苍霭飞云渡，江森楚天沉。 光谲影沙西，破岸又一程。   仁者乐山、智者乐水。山水又一程，七月我又回到了我热爱的山水城市 —— 重庆。 温度适宜，暴晒也还在蛰伏之中。 爸爸五十岁生日，叔叔们早就提前了他们的狂欢吃了起来：「乌江鱼豆花鱼」、「土家山珍」、「赵二哥羊肉馆」吃食都是十几年的老店。二妈也为爸爸准备了蛋糕、鲜花。 对于「病怏怏」的爸爸来说，大家都知道生日对他意味着什么，不提起就没发生过。我们">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Nginx">
-<meta property="og:url" content="http://jocolorful.com/2021/07/13/Nginx/index.html">
+<meta property="og:title" content="盛夏归家">
+<meta property="og:url" content="http://jocolorful.com/2021/07/15/%E7%94%9F%E6%B4%BB-%E7%9B%9B%E5%A4%8F%E5%BD%92%E5%AE%B6/index.html">
 <meta property="og:site_name" content="Jojo&#39;s World">
-<meta property="og:description" content="重载配置文件 .&#x2F;nginx -s reload 日志切割 备份当前日志 .&#x2F;nginx -s  reopen 每周执行一次，写在脚本当中 crontab gzip on gzip_comp_level 2  压缩级别 压缩消耗GPU autoindex_moduls autoindex_on &#x2F;&#x2F;  文件夹 set limite-rate 控制流量 以秒为单位 access.log 缓存">
+<meta property="og:description" content="苍霭飞云渡，江森楚天沉。 光谲影沙西，破岸又一程。   仁者乐山、智者乐水。山水又一程，七月我又回到了我热爱的山水城市 —— 重庆。 温度适宜，暴晒也还在蛰伏之中。 爸爸五十岁生日，叔叔们早就提前了他们的狂欢吃了起来：「乌江鱼豆花鱼」、「土家山珍」、「赵二哥羊肉馆」吃食都是十几年的老店。二妈也为爸爸准备了蛋糕、鲜花。 对于「病怏怏」的爸爸来说，大家都知道生日对他意味着什么，不提起就没发生过。我们">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2021-07-13T15:18:44.784Z">
-<meta property="article:modified_time" content="2021-07-13T15:18:44.784Z">
+<meta property="og:image" content="http://jocolorful.com/images/%E7%94%9F%E6%B4%BB-%E5%BD%92%E5%AE%B6.jpg">
+<meta property="article:published_time" content="2021-07-15T03:05:46.000Z">
+<meta property="article:modified_time" content="2021-07-16T13:42:58.204Z">
 <meta property="article:author" content="Jojo">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://jocolorful.com/images/%E7%94%9F%E6%B4%BB-%E5%BD%92%E5%AE%B6.jpg">
 
   
 
@@ -99,22 +101,17 @@ ga('send', 'pageview');
   
 
   
-  <div id="toc" class="toc-article">
-    <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#重载配置文件"><span class="toc-text">重载配置文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#日志切割"><span class="toc-text">日志切割</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#缓存"><span class="toc-text">缓存</span></a></li></ol>
-  </div>
-
 
 
 <div class="content content-post CENTER">
-   <article id="post-Nginx" class="article article-type-post" itemprop="blogPost">
+   <article id="post-生活-盛夏归家" class="article article-type-post" itemprop="blogPost">
   <header class="article-header">
-    <h1 class="post-title">Nginx</h1>
+    <h1 class="post-title">盛夏归家</h1>
 
     <div class="article-meta">
       <span>
         <i class="icon-calendar"></i>
-        <span>2021.07.13</span>
+        <span>2021.07.15</span>
       </span>
 
       
@@ -125,6 +122,11 @@ ga('send', 'pageview');
       
 
       
+  <span class="article-category">
+    <i class="icon-list"></i>
+    <a class="article-category-link" href="/categories/%E7%94%9F%E6%B4%BB%E9%9A%8F%E6%84%9F/">生活随感</a>
+  </span>
+
 
 
       
@@ -142,21 +144,19 @@ ga('send', 'pageview');
 
   <div class="article-content">
     
-      <h2 id="重载配置文件">重载配置文件</h2>
-<p>./nginx -s reload</p>
-<h2 id="日志切割">日志切割</h2>
-<p>备份当前日志</p>
-<p>./nginx -s  reopen</p>
-<p>每周执行一次，写在脚本当中</p>
-<p>crontab</p>
-<p>gzip on<br>
-gzip_comp_level 2  压缩级别<br>
-压缩消耗GPU</p>
-<p>autoindex_moduls</p>
-<p>autoindex_on //  文件夹</p>
-<p>set limite-rate 控制流量 以秒为单位</p>
-<p>access.log</p>
-<h2 id="缓存">缓存</h2>
+      <p style="text-align:center">
+苍霭飞云渡，江森楚天沉。<br/>
+光谲影沙西，破岸又一程。
+</p>
+<center><img src="/images/生活-归家.jpg"  width="500px" /></center>
+<p>仁者乐山、智者乐水。山水又一程，七月我又回到了我热爱的山水城市 —— 重庆。</p>
+<p>温度适宜，暴晒也还在蛰伏之中。</p>
+<p>爸爸五十岁生日，叔叔们早就提前了他们的狂欢吃了起来：「乌江鱼豆花鱼」、「土家山珍」、「赵二哥羊肉馆」吃食都是十几年的老店。二妈也为爸爸准备了蛋糕、鲜花。</p>
+<p>对于「病怏怏」的爸爸来说，大家都知道生日对他意味着什么，不提起就没发生过。我们都是乐观的人。爸爸今年看起来胖了一点，气色也好了很多，希望我每年都可以陪他快快乐乐地过生日。</p>
+<p>往返家乡最喜欢的是高速路上的风景：大江大河的重庆，朴实的家乡人顶着酷暑用肩挑背扛建造出一座漂亮的城市。返程前下了整夜的雨，第二天雾气迟迟散不开来。我兴奋地在微信群里喊叫到：「我看见了云海」。极目远眺：云雾亲吻着山脉，风一吹厚重的云垛缓缓蠕动和山缠绵在一起迟迟不愿意分开。大巴在高速行驶着会穿过各种长度的隧道、桥梁。最喜欢过桥，这些桥梁要么架设在大山之间、要么架设在江河之上。大巴快速地行驶至河面的大桥时，光柱从西边的天空中倾泻到河面上，只透出薄薄的一层。灰色的云将天空压得很低。墨色的两岸嵌着白色的房屋，乡村公路似玉带般缠绕在山的腰间。飞驰而过不能让我停下来好好欣赏这美景。原来我现在追求的美景从小就陪伴着我，抑或是我一直在找寻童年的美好。</p>
+<p>在重山之中，在大河之山，在天际尽头… …</p>
+<p>回程的暴雨让我经历了人生的第一次备降，我总是会对各种第一次感到兴奋。曲折的返程大概是经历了：航班取消，飞机本从晚七点延误到晚九点，航程中飞机不断在空中盘旋画圈。印象最深刻是在吕梁山附近盘旋了至少五圈，在迫近北京附近，由于雷雨天气直接飞到了内蒙，约摸十一点半的时候机长很无奈地宣布需要迫降沈阳。这使我格外的兴奋。因为机长的语气里至少带了些许的人的情感，不再是冷冰冰地用机器宣布：「我和我的组员一定会保证您安全抵达」。当夜，我们离机场 30km 的酒店休息，凌晨三点多，办好入住终于可以休息了（完美错过北京暴雨，竟有一些遗憾 doge）虽然第二天是在家办公，但是心里慌得很，很怕其他人来找我或者有线上问题不能及时处理。</p>
+<p>四天三夜三座城市，恍如隔世。一场长长的梦… …</p>
 
     
   </div>
@@ -168,10 +168,10 @@ gzip_comp_level 2  压缩级别<br>
 
    
   <div class="box-prev-next clearfix">
-    <a class="show pull-left" href="/2021/07/13/%E9%98%85%E8%AF%BB-%E4%B8%80%E4%B8%AA%E4%BA%BA%E7%9A%84%E5%A5%BD%E5%A4%A9%E6%B0%94/">
+    <a class="show pull-left" href="/2021/07/14/%E9%98%85%E8%AF%BB-%E5%92%96%E5%95%A1%E5%92%96%E5%95%A1/">
         <i class="icon icon-angle-left"></i>
     </a>
-    <a class="show pull-right" href="/2021/07/13/colorTheGrid/">
+    <a class="show pull-right" href="/2021/07/15/%E9%98%85%E8%AF%BB-%E6%95%B0%E5%AD%A6%E4%B8%8E%E7%94%9F%E6%B4%BB/">
         <i class="icon icon-angle-right"></i>
     </a>
   </div>
