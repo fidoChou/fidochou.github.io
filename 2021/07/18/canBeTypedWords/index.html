@@ -8,7 +8,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   
-  <title>留言板 | Jojo&#39;s World</title>
+  <title>canBeTypedWords | Jojo&#39;s World</title>
 
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -16,15 +16,15 @@
     <meta name="keywords" content="jojo,前端,户外领队,frontend,nodejs,JavaScript,Outdoor Leader" />
   
 
-  <meta name="description" content="hi~，很高兴见到你！期待这里能留下你的足迹！">
+  <meta name="description" content="var maxPoints &#x3D; function(points) { 	let m &#x3D; points.length 	let n &#x3D; points[0].length   let score &#x3D; 0   let cache &#x3D; []  	for (var i &#x3D; 0; i &lt; m; i++) {  		const curArray &#x3D; points[i] 		let curMax &#x3D; curAr">
 <meta property="og:type" content="article">
-<meta property="og:title" content="留言板">
-<meta property="og:url" content="http://jocolorful.com/2021/06/19/%E7%95%99%E8%A8%80%E6%9D%BF/index.html">
+<meta property="og:title" content="canBeTypedWords">
+<meta property="og:url" content="http://jocolorful.com/2021/07/18/canBeTypedWords/index.html">
 <meta property="og:site_name" content="Jojo&#39;s World">
-<meta property="og:description" content="hi~，很高兴见到你！期待这里能留下你的足迹！">
+<meta property="og:description" content="var maxPoints &#x3D; function(points) { 	let m &#x3D; points.length 	let n &#x3D; points[0].length   let score &#x3D; 0   let cache &#x3D; []  	for (var i &#x3D; 0; i &lt; m; i++) {  		const curArray &#x3D; points[i] 		let curMax &#x3D; curAr">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2021-06-19T13:35:09.000Z">
-<meta property="article:modified_time" content="2021-06-27T01:35:00.654Z">
+<meta property="article:published_time" content="2021-07-18T02:32:01.645Z">
+<meta property="article:modified_time" content="2021-07-18T03:59:32.528Z">
 <meta property="article:author" content="Jojo">
 <meta name="twitter:card" content="summary">
 
@@ -102,14 +102,14 @@ ga('send', 'pageview');
 
 
 <div class="content content-post CENTER">
-   <article id="post-留言板" class="article article-type-post" itemprop="blogPost">
+   <article id="post-canBeTypedWords" class="article article-type-post" itemprop="blogPost">
   <header class="article-header">
-    <h1 class="post-title">留言板</h1>
+    <h1 class="post-title">canBeTypedWords</h1>
 
     <div class="article-meta">
       <span>
         <i class="icon-calendar"></i>
-        <span>2021.06.19</span>
+        <span>2021.07.18</span>
       </span>
 
       
@@ -131,10 +131,56 @@ ga('send', 'pageview');
 
   <div class="article-content">
     
-      <blockquote>
-<p>hi~，很高兴见到你！期待这里能留下你的足迹！</p>
-</blockquote>
+      
+var maxPoints = function(points) {
+	let m = points.length
+	let n = points[0].length
+  let score = 0
+  let cache = []
 
+	for (var i = 0; i < m; i++) {
+
+		const curArray = points[i]
+		let curMax = curArray[0]
+
+		cache[i] = [{
+			max: curMax,
+			index: 0
+		}]
+
+		for (var j = 1; j < curArray.length; j++) {
+			if (points[i][j] === curMax) {
+				cache[i].push({
+					max: curMax,
+					index: j
+				})
+			}
+			if (points[i][j] > curMax) {
+				curMax = points[i][j]
+				cache[i] = [{
+					max: curMax,
+					index: j
+				}]
+			}
+		}
+	}
+
+	let score = 0
+
+	for (var i = 0; i < n; i++) {
+		let curCaches = cache[i]
+		let diff = 0
+		score += cache[i].max
+
+		for (var j = 0; j < m; j++) {
+			diff += Math.abs(curCaches[i][j].index - curCaches[i][j].index)
+			// cache[i]
+			// let index = curCaches[i][j].index
+
+		}
+	}
+  return cache
+};
     
   </div>
 
@@ -145,10 +191,10 @@ ga('send', 'pageview');
 
    
   <div class="box-prev-next clearfix">
-    <a class="show pull-left" href="/2021/06/19/Weekly/">
+    <a class="show pull-left" href="/2021/07/16/%E7%AE%97%E6%B3%95-%E9%80%92%E5%BD%92%E6%80%BB%E7%BB%93/">
         <i class="icon icon-angle-left"></i>
     </a>
-    <a class="show pull-right" href="/2021/06/20/%E6%99%B4%E9%9B%85%E9%9B%86/">
+    <a class="hide pull-right" href="/">
         <i class="icon icon-angle-right"></i>
     </a>
   </div>

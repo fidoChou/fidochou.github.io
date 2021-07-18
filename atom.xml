@@ -6,7 +6,7 @@
   <link href="http://jocolorful.com/atom.xml" rel="self"/>
   
   <link href="http://jocolorful.com/"/>
-  <updated>2021-07-17T00:39:43.320Z</updated>
+  <updated>2021-07-18T03:59:32.528Z</updated>
   <id>http://jocolorful.com/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>canBeTypedWords</title>
+    <link href="http://jocolorful.com/2021/07/18/canBeTypedWords/"/>
+    <id>http://jocolorful.com/2021/07/18/canBeTypedWords/</id>
+    <published>2021-07-18T02:32:01.645Z</published>
+    <updated>2021-07-18T03:59:32.528Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html"></summary>
+        
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>递归总结</title>
@@ -90,8 +111,16 @@
     <link href="http://jocolorful.com/2021/07/14/%E9%98%85%E8%AF%BB-%E5%92%96%E5%95%A1%E5%92%96%E5%95%A1/"/>
     <id>http://jocolorful.com/2021/07/14/%E9%98%85%E8%AF%BB-%E5%92%96%E5%95%A1%E5%92%96%E5%95%A1/</id>
     <published>2021-07-14T14:33:55.000Z</published>
-    <updated>2021-07-17T00:39:35.112Z</updated>
+    <updated>2021-07-17T07:40:17.004Z</updated>
     
+    
+      
+      
+        
+        
+    <summary type="html"></summary>
+        
+      
     
     
     
@@ -368,7 +397,7 @@
     <link href="http://jocolorful.com/2021/06/23/%E5%B7%A5%E5%85%B7%E9%9B%86/"/>
     <id>http://jocolorful.com/2021/06/23/%E5%B7%A5%E5%85%B7%E9%9B%86/</id>
     <published>2021-06-23T06:26:33.000Z</published>
-    <updated>2021-07-16T13:27:20.651Z</updated>
+    <updated>2021-07-18T01:40:43.121Z</updated>
     
     
       
@@ -453,27 +482,6 @@
     
     
     <category term="Node.js" scheme="http://jocolorful.com/categories/Node-js/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>晴雅集</title>
-    <link href="http://jocolorful.com/2021/06/20/%E6%99%B4%E9%9B%85%E9%9B%86/"/>
-    <id>http://jocolorful.com/2021/06/20/%E6%99%B4%E9%9B%85%E9%9B%86/</id>
-    <published>2021-06-20T05:37:58.000Z</published>
-    <updated>2021-07-17T01:18:02.406Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html"></summary>
-        
-      
-    
-    
     
     
   </entry>

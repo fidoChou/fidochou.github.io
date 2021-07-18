@@ -16,15 +16,15 @@
     <meta name="keywords" content="jojo,前端,户外领队,frontend,nodejs,JavaScript,Outdoor Leader" />
   
 
-  <meta name="description" content="原文链接 👉 CSS 加载会造成阻塞吗 读后感： 在浏览器引擎渲染的世界里，我简单地将 HTML 呈现给用户的方式分为了两个过程：加载以及渲染。 DOM 树从上至下依次渲染 解析。遇到 script 标签时，默认会阻止页面解析并平行下载 JS 文件。所以大部分的文章建议你将 JS 文件放在 body 后面，这样不会影响 HTML 的解析。 属性defer以及async不会阻塞页面解析，文档解析完">
+  <meta name="description" content="原文链接 👉 CSS 加载会造成阻塞吗 读后感： 在浏览器引擎渲染的世界里，我简单地将 HTML 呈现给用户的方式分为了两个过程：加载以及渲染。 DOM 树从上至下依次渲染 解析。遇到 script 标签时，默认会阻止页面解析并平行下载 JS 文件。所以大部分的文章建议你将 JS 文件放在 body 后面，这样不会影响 HTML 的解析。 属性 defer 以及 async 不会阻塞页面解析，文">
 <meta property="og:type" content="article">
 <meta property="og:title" content="CSS 加载会造成阻塞吗？">
 <meta property="og:url" content="http://jocolorful.com/2020/05/25/CSS%20%E5%8A%A0%E8%BD%BD%E4%BC%9A%E9%80%A0%E6%88%90%E9%98%BB%E5%A1%9E%E5%90%97/index.html">
 <meta property="og:site_name" content="Jojo&#39;s World">
-<meta property="og:description" content="原文链接 👉 CSS 加载会造成阻塞吗 读后感： 在浏览器引擎渲染的世界里，我简单地将 HTML 呈现给用户的方式分为了两个过程：加载以及渲染。 DOM 树从上至下依次渲染 解析。遇到 script 标签时，默认会阻止页面解析并平行下载 JS 文件。所以大部分的文章建议你将 JS 文件放在 body 后面，这样不会影响 HTML 的解析。 属性defer以及async不会阻塞页面解析，文档解析完">
+<meta property="og:description" content="原文链接 👉 CSS 加载会造成阻塞吗 读后感： 在浏览器引擎渲染的世界里，我简单地将 HTML 呈现给用户的方式分为了两个过程：加载以及渲染。 DOM 树从上至下依次渲染 解析。遇到 script 标签时，默认会阻止页面解析并平行下载 JS 文件。所以大部分的文章建议你将 JS 文件放在 body 后面，这样不会影响 HTML 的解析。 属性 defer 以及 async 不会阻塞页面解析，文">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-05-25T06:40:32.000Z">
-<meta property="article:modified_time" content="2021-07-17T01:19:53.667Z">
+<meta property="article:modified_time" content="2021-07-18T01:46:42.875Z">
 <meta property="article:author" content="Jojo">
 <meta name="twitter:card" content="summary">
 
@@ -135,12 +135,6 @@ ga('send', 'pageview');
       
 
       
-      <i class="fa fa-eye"></i> 
-        <span id="busuanzi_container_page_pv">
-           &nbsp热度 <span id="busuanzi_value_page_pv">
-           <i class="fa fa-spinner fa-spin"></i></span>℃
-        </span>
-      
       
     </div>
   </header>
@@ -152,7 +146,10 @@ ga('send', 'pageview');
 <p>读后感：</p>
 <p>在浏览器引擎渲染的世界里，我简单地将 HTML 呈现给用户的方式分为了两个过程：加载以及渲染。</p>
 <p>DOM 树从上至下依次<strike>渲染</strike> 解析。遇到 script 标签时，默认会阻止页面解析并平行下载 JS 文件。所以大部分的文章建议你将 JS 文件放在 body 后面，这样不会影响 HTML 的解析。</p>
-<p>属性<code>defer</code>以及<code>async</code>不会阻塞页面解析，文档解析完成之后，<code>defer</code> 和 <code>async</code> 脚本执行。<code>defer</code>以及<code>async</code> 的区别在于：<code>defer</code>执行脚本的顺序是加载顺序 而<code>async</code>则不能保证顺序。同时这两个属性都只在外链时生效，即含有<code>src</code>属性时生效。</p>
+<p>属性 <code>defer</code> 以及 <code>async</code> 不会阻塞页面解析，文档解析完成之后 <code>defer</code> 和 <code>async</code> 脚本执行。</p>
+<p><code>defer</code> 以及 <code>async</code> 的区别在于：<br>
+<code>defer</code> 执行脚本的顺序是加载顺序，而<code>async</code>则不能保证顺序。<br>
+同时这两个属性都只在外链时生效，即含有 <code>src</code> 属性时生效。</p>
 <p>在看完文章之后，我再次</p>
 <h1>提问？</h1>
 <p>既然问题是 CSS 是否会造成阻塞，那么阻塞什么内容呢？</p>
