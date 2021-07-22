@@ -24,7 +24,7 @@
 <meta property="og:description" content="用 React Hooks 搭一个 TodoList 作为一个爱折腾的前端，今天讲点新东西: React Hooks 什么是Hooks? Hooks简单来说就是一系列的函数。你可以不用ES6的 classes component的语法；在function component(纯函数)同样可以获取到同样可以获取到React的一些特性，比如state和生命周期，excited？所以呢，我们不叫这些组件">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2019-01-22T04:46:47.000Z">
-<meta property="article:modified_time" content="2021-07-18T02:26:41.828Z">
+<meta property="article:modified_time" content="2021-07-22T13:48:43.614Z">
 <meta property="article:author" content="Jojo">
 <meta property="article:tag" content="React">
 <meta name="twitter:card" content="summary">
@@ -102,7 +102,7 @@ ga('send', 'pageview');
   
   <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#"><span class="toc-text">用 React Hooks 搭一个 TodoList</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#什么是Hooks"><span class="toc-text">什么是Hooks?</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Hooks类型"><span class="toc-text">Hooks类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#讲讲优势"><span class="toc-text">讲讲优势</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#在-prod-环境暂不要使用"><span class="toc-text">在 prod 环境暂不要使用</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#来-Build-一个-Todo-List"><span class="toc-text">来 Build 一个 Todo List</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Setup"><span class="toc-text">Setup</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#写一个-TodoForm-的组件"><span class="toc-text">写一个 TodoForm 的组件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#useState"><span class="toc-text">useState</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#在-Forms-中使用-useState"><span class="toc-text">在 Forms 中使用 useState</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#在-Todos中-使用useState"><span class="toc-text">在 Todos中 使用useState</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#TodoList-组件"><span class="toc-text">TodoList 组件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#增加-Todo"><span class="toc-text">增加 Todo</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#删除-Todo"><span class="toc-text">删除 Todo</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Abstracting-Form-Input-useState"><span class="toc-text">Abstracting Form Input useState</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#other"><span class="toc-text">other</span></a></li></ol></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#"><span class="toc-text">用 React Hooks 搭一个 TodoList</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#什么是Hooks"><span class="toc-text">什么是Hooks?</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Hooks类型"><span class="toc-text">Hooks类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Hooks类型-2"><span class="toc-text">Hooks类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#讲讲优势"><span class="toc-text">讲讲优势</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#在-prod-环境暂不要使用"><span class="toc-text">在 prod 环境暂不要使用</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#来-Build-一个-Todo-List"><span class="toc-text">来 Build 一个 Todo List</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Setup"><span class="toc-text">Setup</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#写一个-TodoForm-的组件"><span class="toc-text">写一个 TodoForm 的组件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#useState"><span class="toc-text">useState</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#在-Forms-中使用-useState"><span class="toc-text">在 Forms 中使用 useState</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#在-Todos中-使用useState"><span class="toc-text">在 Todos中 使用useState</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#TodoList-组件"><span class="toc-text">TodoList 组件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#增加-Todo"><span class="toc-text">增加 Todo</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#删除-Todo"><span class="toc-text">删除 Todo</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Abstracting-Form-Input-useState"><span class="toc-text">Abstracting Form Input useState</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#other"><span class="toc-text">other</span></a></li></ol></li></ol>
   </div>
 
 
@@ -148,6 +148,11 @@ ga('send', 'pageview');
 <p>Hooks简单来说就是一系列的函数。你可以不用ES6的 classes component的语法；在function component(纯函数)同样可以获取到同样可以获取到React的一些特性，比如state和生命周期，excited？所以呢，我们不叫这些组件叫「无状态组件」了，「函数组件」is preferable～</p>
 <h3 id="Hooks类型">Hooks类型</h3>
 <ul>
+<li>State hooks<br>
+Hooks简单来说就是一系列的函数。你可以不用ES6的 classes component的语法；在function component(纯函数)同样可以获取到同样可以获取到React的一些特性，比如state和生命周期，excited？所以呢，我们不叫这些组件叫<code>无状态组件</code>了，<code>函数组件</code>is preferable～</li>
+</ul>
+<h3 id="Hooks类型-2">Hooks类型</h3>
+<ul>
 <li>State hooks</li>
 <li>Effect hooks</li>
 <li>Custom hooks</li>
@@ -177,6 +182,11 @@ ga('send', 'pageview');
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">create-react-app todo-hooks</span><br></pre></td></tr></table></figure>
 <ol start="2">
 <li>升级 package.json 的 react 和 react-dom，这里使用了 antd，让我们的 TodoUI 更加好看。Antd 的具体配置请移步<a href="https://ant.design/docs/react/use-with-create-react-app-cn" target="_blank" rel="noopener">antd文档</a></li>
+</ol>
+<p>package.json:</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">"dependencies": &#123;</span><br><span class="line">  "antd": "^3.12.4",</span><br><span class="line">  "react": "16.7.0-alpha.0 - next",</span><br><span class="line">  "react-dom": "16.7.0-alpha.0 - next",</span><br><span class="line">  "react-scripts": "2.1.3"</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>升级package.json的 react 和 react-dom，这里使用了antd，让我们的TodoUI更加好看。Antd 的具体配置请移步<a href="https://ant.design/docs/react/use-with-create-react-app-cn" target="_blank" rel="noopener">antd文档</a></li>
 </ol>
 <p>package.json:</p>
 <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">"dependencies": &#123;</span><br><span class="line">  "antd": "^3.12.4",</span><br><span class="line">  "react": "16.7.0-alpha.0 - next",</span><br><span class="line">  "react-dom": "16.7.0-alpha.0 - next",</span><br><span class="line">  "react-scripts": "2.1.3"</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
